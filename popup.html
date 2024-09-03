@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 20px;
+            width: 350px;
+        }
+
+        #converter {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        #converter::before {
+            content: '$';
+            font-size: 100px;
+            color: #4caf50;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            opacity: 0.1;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        input[type="number"] {
+            width: 93%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .currency-select {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .link {
+            text-decoration: none; 
+            color: #007bff; 
+            }
+
+        .link:hover {
+            text-decoration: underline; 
+        }
+    </style>
+</head>
+<body>
+    <div id="converter">
+        <h2>Currency Converter</h2>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount" />
+
+        <label for="from-currency">From:</label>
+        <select id="from-currency" class="currency-select">
+        </select>
+
+        <label for="to-currency">To:</label>
+        <select id="to-currency" class="currency-select">
+        </select>
+
+        <button id="convert-btn">Convert</button>
+        <p id="result"></p>
+        <label for="from-currency">Made By:</label>
+        <a href="https://juanbunes.github.io/" target="_blank" rel="noopener noreferrer" class="link">Juan Bu&ntilde;es</a>
+        <label for="from-currency">Powered by:</label>
+        <a href="https://www.exchangerate-api.com/" target="_blank" rel="noopener noreferrer" class="link">ExchangeRate-API</a>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
